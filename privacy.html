@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy di Discollector</title>
+  <meta name="theme-color" content="#0F0A06">
+  <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="legal">
+    <a class="brand" href="./"><img src="icon.png" alt=""><span class="name">Discollector</span></a>
+
+    <!-- Stesso testo di docs/PRIVACY.md: se cambia uno, aggiorna anche l'altro. -->
+    <h1>Informativa sulla privacy</h1>
+    <p class="updated">Ultimo aggiornamento: novembre 2026</p>
+
+    <p>Discollector è un'app per gestire la propria collezione Discogs. Questa pagina spiega quali dati usa e perché.</p>
+
+    <h2>Senza profilo</h2>
+    <p>Puoi usare l'app senza creare un profilo. In questo caso l'app parla solo con Discogs (con il tuo login Discogs) e non invia
+    nulla ai nostri server. Il token di accesso Discogs resta nel portachiavi del telefono.</p>
+
+    <h2>Con il profilo (solo con il tuo consenso)</h2>
+    <p>Se crei il profilo, sul nostro server (Supabase, data center di Francoforte, UE) salviamo:</p>
+    <ul>
+      <li>nome utente, nome, email, foto e conteggi del tuo profilo Discogs, più quello che scrivi tu (bio, paese, generi);</li>
+      <li>una copia della tua collezione Discogs, privata;</li>
+      <li>i prezzi che hai pagato per i dischi, privati;</li>
+      <li>i dischi della wantlist che segni con la stella e i prezzi per gli avvisi, privati;</li>
+      <li>se attivi le notifiche, il codice del telefono per riceverle (le notifiche passano dal servizio push di Expo);</li>
+      <li>le scansioni e le ricerche che fai, usate in forma aggregata per le classifiche dei dischi più scansionati e cercati.</li>
+    </ul>
+    <p>Non vendiamo i dati, non li usiamo per pubblicità e non facciamo tracciamento tra app o siti.</p>
+
+    <h2>Riconoscimento da foto</h2>
+    <p>Se lo attivi, la foto del disco viene inviata a OpenRouter (che la passa a un modello Claude di Anthropic) con la
+    <strong>tua</strong> chiave OpenRouter, salvata solo sul telefono. La foto non passa dai nostri server. Vale l'informativa di OpenRouter.</p>
+
+    <h2>Fotocamera</h2>
+    <p>La fotocamera serve solo per leggere i codici a barre e fotografare i dischi.</p>
+
+    <h2>Cancellazione</h2>
+    <p>In Impostazioni, "Elimina profilo e dati" cancella dal nostro server il profilo e tutti i dati collegati (collezione, prezzi
+    pagati, wantlist, notifiche, scansioni e ricerche). Uscendo dall'account il token Discogs viene rimosso dal telefono.</p>
+
+    <h2>Contatti</h2>
+    <!-- Inserisci un indirizzo email di contatto (richiesto per la revisione App Store) -->
+    <p>Per domande: indirizzo email in arrivo.</p>
+  </main>
+
+  <footer>
+    <p><a href="./">Discollector</a></p>
+    <p><a href="https://getsongbpm.com">Dati di BPM e tonalità da GetSongBPM.com</a></p>
+  </footer>
+</body>
+</html>

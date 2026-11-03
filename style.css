@@ -1,0 +1,104 @@
+/* Stessi token di src/components/theme.ts (Hallmark, tema Spore "cellar"): un solo accento rosa, solo Inter. */
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+
+:root {
+  --paper: #0F0A06;
+  --paper2: #19120E;
+  --ink: #EFE7D8;
+  --ink2: #D3C9BB;
+  --muted: #9D9388;
+  --rule: #372F28;
+  --accent: #E89F92;
+  --accent2: #F6C3BA;
+  --accent-ink: #0F0A06;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink2);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+main, footer {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, .name {
+  color: var(--ink);
+  font-weight: 600;
+  margin: 0;
+}
+
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 0 32px;
+  text-decoration: none;
+}
+.brand img { width: 48px; height: 48px; border-radius: 11px; }
+.name { font-size: 18px; }
+
+.hero h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.36px; }
+.hero p { font-size: 18px; margin: 16px 0 32px; }
+
+.store {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.store:active { background: var(--accent2); }
+
+.features { list-style: none; padding: 0; margin: 48px 0 0; }
+.features li { padding: 16px 0; border-top: 1px solid var(--rule); }
+.features li:last-child { border-bottom: 1px solid var(--rule); }
+.features strong { display: block; color: var(--ink); font-weight: 600; font-size: 18px; }
+
+.legal h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.36px; }
+.legal h2 { font-size: 21px; line-height: 1.25; margin: 32px 0 8px; }
+.legal p, .legal ul { margin: 8px 0; }
+.legal li { margin: 4px 0; }
+.legal .updated { color: var(--muted); font-size: 14px; margin-top: 8px; }
+
+footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: var(--muted);
+  font-size: 14px;
+}
+footer p { margin: 4px 0; }
+footer a { color: var(--ink2); }
+
+@media (max-width: 480px) {
+  main, footer { padding: 0 16px; }
+  footer { padding-top: 48px; padding-bottom: 32px; }
+  .brand { padding-top: 32px; }
+}
