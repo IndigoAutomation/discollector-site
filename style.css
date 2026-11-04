@@ -1,74 +1,59 @@
-/* Stessi token di src/components/theme.ts (Hallmark, tema Spore "cellar"): un solo accento rosa, solo Inter. */
-@font-face {
-  font-family: 'Inter';
-  font-weight: 400;
-  font-display: swap;
-  src: url('fonts/inter-latin-400-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 600;
-  font-display: swap;
-  src: url('fonts/inter-latin-600-normal.woff2') format('woff2');
-}
+/* Stessi token di src/components/theme.ts dell'app (tema Groove): intestazione scura, foglio chiaro arrotondato,
+   un solo accento viola, un pastello per sezione, Plus Jakarta Sans. */
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 400; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 600; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; font-display: swap; src: url('fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2'); }
 
 :root {
-  --paper: #0F0A06;
-  --paper2: #19120E;
-  --ink: #EFE7D8;
-  --ink2: #D3C9BB;
-  --muted: #9D9388;
-  --rule: #372F28;
-  --accent: #E89F92;
-  --accent2: #F6C3BA;
-  --accent-ink: #0F0A06;
-  color-scheme: dark;
+  --paper: #F6F4FA;
+  --paper2: #FFFFFF;
+  --ink: #16141C;
+  --ink2: #4B4560;
+  --muted: #6E6880;
+  --rule: #E4E0EE;
+  --accent: #7C5CFF;
+  --accent2: #6A48F5;
+  --accent-ink: #FFFFFF;
+  --night: #0E0D12;
+  --night-ink: #F4F2FA;
+  --night-muted: #A9A4B8;
+  --mint: #B9F0CB;   --mint-ink: #10301D;
+  --lilac: #D8C9FF;  --lilac-ink: #2A1A5E;
+  --pink: #FFBBCB;   --pink-ink: #5A1426;
+  --amber: #FFD99E;  --amber-ink: #4D3008;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--night);
   color: var(--ink2);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
-}
-
-main, footer {
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-h1, h2, .name {
-  color: var(--ink);
-  font-weight: 600;
-  margin: 0;
-}
-
-a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-
-.brand {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 48px 0 32px;
-  text-decoration: none;
+  flex-direction: column;
 }
-.brand img { width: 48px; height: 48px; border-radius: 11px; }
-.name { font-size: 18px; }
 
-.hero h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.36px; }
-.hero p { font-size: 18px; margin: 16px 0 32px; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+/* Intestazione scura */
+header { color: var(--night-muted); padding: 40px 0 48px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--night-ink); }
+.brand img { width: 44px; height: 44px; border-radius: 12px; }
+.brand span { font-weight: 700; font-size: 18px; letter-spacing: -0.2px; }
+header h1 { color: var(--night-ink); font-weight: 700; font-size: 36px; line-height: 1.15; letter-spacing: -0.8px; margin: 40px 0 0; }
+header p { font-size: 18px; margin: 16px 0 0; }
 
 .store {
   display: inline-flex;
   align-items: center;
-  min-height: 48px;
-  padding: 0 24px;
+  min-height: 52px;
+  margin-top: 32px;
+  padding: 0 28px;
   border-radius: 999px;
   background: var(--accent);
   color: var(--accent-ink);
@@ -77,28 +62,40 @@ a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 }
 .store:active { background: var(--accent2); }
 
-.features { list-style: none; padding: 0; margin: 48px 0 0; }
-.features li { padding: 16px 0; border-top: 1px solid var(--rule); }
-.features li:last-child { border-bottom: 1px solid var(--rule); }
-.features strong { display: block; color: var(--ink); font-weight: 600; font-size: 18px; }
-
-.legal h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.36px; }
-.legal h2 { font-size: 21px; line-height: 1.25; margin: 32px 0 8px; }
-.legal p, .legal ul { margin: 8px 0; }
-.legal li { margin: 4px 0; }
-.legal .updated { color: var(--muted); font-size: 14px; margin-top: 8px; }
-
-footer {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  color: var(--muted);
-  font-size: 14px;
+/* Foglio chiaro */
+.sheet {
+  background: var(--paper);
+  border-radius: 32px 32px 0 0;
+  padding: 32px 0 40px;
+  flex: 1;
 }
-footer p { margin: 4px 0; }
-footer a { color: var(--ink2); }
 
-@media (max-width: 480px) {
-  main, footer { padding: 0 16px; }
-  footer { padding-top: 48px; padding-bottom: 32px; }
-  .brand { padding-top: 32px; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; padding: 0; margin: 0; }
+.tiles li { border-radius: 22px; padding: 20px; }
+.tiles strong { display: block; font-weight: 700; font-size: 20px; letter-spacing: -0.2px; margin-bottom: 6px; }
+.tile-mint  { background: var(--mint);  color: var(--mint-ink); }
+.tile-lilac { background: var(--lilac); color: var(--lilac-ink); }
+.tile-pink  { background: var(--pink);  color: var(--pink-ink); }
+.tile-amber { background: var(--amber); color: var(--amber-ink); }
+
+.card { background: var(--paper2); border-radius: 22px; padding: 24px; }
+.card h2 { color: var(--ink); font-weight: 700; font-size: 20px; line-height: 1.25; letter-spacing: -0.2px; margin: 28px 0 8px; }
+.card h2:first-child { margin-top: 0; }
+.card p, .card ul { margin: 8px 0; }
+.card > p:first-child { margin-top: 0; }
+.card li { margin: 4px 0; }
+.card strong { color: var(--ink); }
+
+footer { color: var(--muted); font-size: 14px; padding-top: 32px; }
+footer p { margin: 4px 0; }
+a { color: var(--accent); font-weight: 600; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+@media (max-width: 520px) {
+  .wrap { padding: 0 16px; }
+  header { padding: 28px 0 36px; }
+  header h1 { font-size: 30px; margin-top: 32px; }
+  .tiles { grid-template-columns: 1fr; }
+  .sheet { padding-top: 24px; }
+  .card { padding: 20px; }
 }
