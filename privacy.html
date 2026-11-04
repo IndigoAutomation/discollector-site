@@ -25,8 +25,10 @@
     <p>Discollector è un'app per gestire la propria collezione Discogs. Questa pagina spiega quali dati usa e perché.</p>
 
     <h2>Senza profilo</h2>
-    <p>Puoi usare l'app senza creare un profilo. In questo caso l'app parla solo con Discogs (con il tuo login Discogs) e non invia
-    nulla ai nostri server. Il token di accesso Discogs resta nel portachiavi del telefono.</p>
+    <p>Puoi usare l'app senza creare un profilo. In questo caso l'app parla soprattutto con Discogs (con il tuo login Discogs) e sul
+    nostro server non salviamo nulla di tuo. Il server riceve solo le richieste necessarie (sapere se hai un profilo, le classifiche,
+    i prezzi già noti dei dischi): il token Discogs viene verificato con Discogs a ogni richiesta e non viene salvato. Il token di
+    accesso resta nel portachiavi del telefono.</p>
 
     <h2>Con il profilo (solo con il tuo consenso)</h2>
     <p>Se crei il profilo, sul nostro server (Supabase, data center di Francoforte, UE) salviamo:</p>
@@ -37,14 +39,31 @@
       <li>i dischi della wantlist che segni con la stella e i prezzi per gli avvisi, privati;</li>
       <li>se attivi le notifiche, il codice del telefono per riceverle (le notifiche passano dal servizio push di Expo);</li>
       <li>le valigie che prepari per le serate, private;</li>
+      <li>il saldo e i movimenti delle scansioni da foto (comprese quelle acquistate), privati;</li>
       <li>i BPM e le tonalità che salvi per le tracce: sono condivisi con chi usa Discollector, senza il tuo nome;</li>
       <li>le scansioni e le ricerche che fai, usate in forma aggregata per le classifiche dei dischi più scansionati e cercati.</li>
     </ul>
     <p>Non vendiamo i dati, non li usiamo per pubblicità e non facciamo tracciamento tra app o siti.</p>
 
     <h2>Riconoscimento da foto</h2>
-    <p>Se lo attivi, la foto del disco viene inviata a OpenRouter (che la passa a un modello Claude di Anthropic) con la
-    <strong>tua</strong> chiave OpenRouter, salvata solo sul telefono. La foto non passa dai nostri server. Vale l'informativa di OpenRouter.</p>
+    <p>Il riconoscimento da foto richiede il profilo e funziona in due modi:</p>
+    <ul>
+      <li><strong>con le scansioni</strong> (10 gratuite, poi pacchetti acquistati nell'app): la foto passa dal nostro server, che la invia a
+      OpenRouter (che la passa a un modello Claude di Anthropic, negli Stati Uniti) con la nostra chiave. La foto non viene salvata:
+      serve solo per restituirti i dati del disco. Salviamo solo il movimento del saldo (una scansione usata o restituita);</li>
+      <li><strong>con la tua chiave OpenRouter</strong>, salvata solo sul telefono: la foto va direttamente a OpenRouter e non passa dai nostri server.</li>
+    </ul>
+    <p>In entrambi i casi vale anche l'informativa di OpenRouter.</p>
+
+    <h2>Acquisti in-app</h2>
+    <p>I pacchetti di scansioni si comprano con l'acquisto in-app di Apple (o di Google). Il pagamento lo gestisce lo store: noi non
+    vediamo i dati di pagamento. Per verificare gli acquisti usiamo RevenueCat, che riceve il tuo nome utente Discogs e le
+    transazioni dello store.</p>
+
+    <h2>Video dei dischi</h2>
+    <p>Nella scheda di un disco puoi aprire i video che gli utenti Discogs hanno collegato a quel disco. Il video si apre nel player
+    ufficiale di YouTube (modalità privacy avanzata, youtube-nocookie.com) solo quando lo tocchi: da quel momento vale l'informativa
+    di Google/YouTube.</p>
 
     <h2>Fotocamera</h2>
     <p>La fotocamera serve solo per leggere i codici a barre e fotografare i dischi.</p>
@@ -54,8 +73,10 @@
     non viene registrato, salvato né inviato a nessuno.</p>
 
     <h2>Cancellazione</h2>
-    <p>In Impostazioni, "Elimina profilo e dati" cancella dal nostro server il profilo e tutti i dati collegati (collezione, prezzi
-    pagati, wantlist, notifiche, valigie, scansioni e ricerche). I BPM e le tonalità condivisi restano, senza il tuo nome. Uscendo dall'account il token Discogs viene rimosso dal telefono.</p>
+    <p>Nel Profilo, in "Dati del profilo", il pulsante "Elimina profilo e dati" cancella dal nostro server il profilo e tutti i dati
+    collegati (collezione, prezzi pagati, wantlist, notifiche, valigie, scansioni e ricerche, saldo delle scansioni da foto: quelle non
+    usate si perdono). I BPM e le tonalità condivisi restano, senza il tuo nome. Uscendo dall'account il token Discogs viene rimosso
+    dal telefono.</p>
 
     <h2>Contatti</h2>
     <!-- Inserisci un indirizzo email di contatto (richiesto per la revisione App Store) -->
