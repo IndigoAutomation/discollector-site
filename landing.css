@@ -44,7 +44,7 @@ body.landing {
 .slot { position: absolute; width: var(--w); will-change: transform; }
 .phone {
   width: 100%;
-  aspect-ratio: 600 / 1226;
+  aspect-ratio: 600 / 1197;
   padding: calc(var(--w) * 0.028);
   border-radius: calc(var(--w) * 0.17);
   background: linear-gradient(145deg, #E4E1EC 0%, #7A7590 18%, #2B2837 45%, #4A4560 70%, #C9C5D6 100%);

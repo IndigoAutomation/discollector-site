@@ -11,5 +11,5 @@ Landing page e informativa sulla privacy di [Discollector](https://discollector.
   l'avanzamento `--p` di ogni sezione e cambia le schermate del racconto; con "riduci movimento" i telefoni restano fermi).
   `style.css` ha i token comuni e serve anche alla privacy.
 - Colori e font sono gli stessi di `src/components/theme.ts` dell'app (Plus Jakarta Sans in `fonts/`, licenza OFL).
-- `icon.png` e `favicon.png` vengono da `assets/icon.png` dell'app (logo borsa). `img/*.jpg` sono catture dell'app;
+- `icon.png` e `favicon.png` vengono da `assets/icon.png` dell'app (logo borsa). `img/*.jpg` sono gli schermi degli screenshot App Store 1.2 (release/app-store/1.2, ritagliati);
   `img/qr-app-store.svg` porta a https://apps.apple.com/app/id6830593741 (rigenerabile con `segno`).
