@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy di Discollector</title>
+  <title>Discollector Privacy Policy</title>
+  <script src="redirect.js"></script>
   <meta name="theme-color" content="#0E0D12">
   <link rel="icon" href="favicon.png">
   <link rel="apple-touch-icon" href="icon.png">
@@ -14,72 +15,74 @@
     <div class="wrap">
       <a class="brand" href="./"><img src="icon.png" alt=""><span>Discollector</span></a>
       <!-- Stesso testo di docs/PRIVACY.md nella repo dell'app: se cambia uno, aggiorna l'altro. -->
-      <h1>Informativa sulla privacy</h1>
-      <p>Ultimo aggiornamento: novembre 2026</p>
+      <h1>Privacy Policy</h1>
+      <p>Last updated: November 2026</p>
     </div>
   </header>
 
   <main class="sheet">
     <div class="wrap">
       <div class="card">
-    <p>Discollector è un'app per gestire la propria collezione Discogs. Questa pagina spiega quali dati usa e perché.</p>
+    <p>Discollector is an app for managing your Discogs collection. This page explains what data it uses and why.</p>
 
-    <h2>Senza profilo</h2>
-    <p>Puoi usare l'app senza creare un profilo. In questo caso l'app parla soprattutto con Discogs (con il tuo login Discogs) e sul
-    nostro server non salviamo nulla di tuo. Il server riceve solo le richieste necessarie (sapere se hai un profilo, le classifiche,
-    i prezzi già noti dei dischi): il token Discogs viene verificato con Discogs a ogni richiesta e non viene salvato. Il token di
-    accesso resta nel portachiavi del telefono.</p>
+    <h2>Without a profile</h2>
+    <p>You can use the app without creating a profile. In this case, the app communicates mainly with Discogs (using your Discogs
+    login), and we do not store any of your data on our server. The server only receives the requests needed to check whether you
+    have a profile, retrieve rankings and look up known record prices. Your Discogs token is verified with Discogs on each request
+    and is not stored on our server. The access token stays in your phone's secure keychain.</p>
 
-    <h2>Con il profilo (solo con il tuo consenso)</h2>
-    <p>Se crei il profilo, sul nostro server (Supabase, data center di Francoforte, UE) salviamo:</p>
+    <h2>With a profile (only with your consent)</h2>
+    <p>If you create a profile, we store the following on our server (Supabase, Frankfurt data center, EU):</p>
     <ul>
-      <li>nome utente, nome, email, foto e conteggi del tuo profilo Discogs, più quello che scrivi tu (bio, paese, generi);</li>
-      <li>una copia della tua collezione Discogs, privata;</li>
-      <li>i prezzi che hai pagato per i dischi, privati;</li>
-      <li>i dischi della wantlist che segni con la stella e i prezzi per gli avvisi, privati;</li>
-      <li>se attivi le notifiche, il codice del telefono per riceverle (le notifiche passano dal servizio push di Expo);</li>
-      <li>le valigie che prepari per le serate, private;</li>
-      <li>il saldo e i movimenti delle scansioni da foto (comprese quelle acquistate), privati;</li>
-      <li>i BPM e le tonalità che salvi per le tracce: sono condivisi con chi usa Discollector, senza il tuo nome;</li>
-      <li>le scansioni e le ricerche che fai, usate in forma aggregata per le classifiche dei dischi più scansionati e cercati.</li>
+      <li>the username, name, email, photo and counts from your Discogs profile, along with what you enter yourself (bio, country, genres);</li>
+      <li>a private copy of your Discogs collection;</li>
+      <li>the prices you paid for your records, kept private;</li>
+      <li>the wantlist records you star and the prices you set for alerts, kept private;</li>
+      <li>if you enable notifications, your phone's push notification token (notifications are sent through Expo's push service);</li>
+      <li>the crates you prepare for gigs, kept private;</li>
+      <li>your photo scan balance and transactions (including purchased scans), kept private;</li>
+      <li>the BPM and keys you save for tracks: these are shared with other Discollector users without your name;</li>
+      <li>your scans and searches, used in aggregate to rank the most scanned and searched records.</li>
     </ul>
-    <p>Non vendiamo i dati, non li usiamo per pubblicità e non facciamo tracciamento tra app o siti.</p>
+    <p>We do not sell your data, use it for advertising or track you across apps or websites.</p>
 
-    <h2>Riconoscimento da foto</h2>
-    <p>Il riconoscimento da foto richiede il profilo e funziona in due modi:</p>
+    <h2>Photo recognition</h2>
+    <p>Photo recognition requires a profile and works in two ways:</p>
     <ul>
-      <li><strong>con le scansioni</strong> (10 gratuite, poi pacchetti acquistati nell'app): la foto passa dal nostro server, che la invia a
-      OpenRouter (che la passa a un modello Claude di Anthropic, negli Stati Uniti) con la nostra chiave. La foto non viene salvata:
-      serve solo per restituirti i dati del disco. Salviamo solo il movimento del saldo (una scansione usata o restituita);</li>
-      <li><strong>con la tua chiave OpenRouter</strong>, salvata solo sul telefono: la foto va direttamente a OpenRouter e non passa dai nostri server.</li>
+      <li><strong>using scan credits</strong> (10 free scans, then packs purchased in the app): the photo passes through our server,
+      which sends it to OpenRouter using our key. OpenRouter passes it to an Anthropic Claude model in the United States. The photo
+      is not stored: it is only used to return the record's details. We only store the balance transaction (one scan used or refunded);</li>
+      <li><strong>using your own OpenRouter key</strong>, stored only on your phone: the photo goes directly to OpenRouter and does not pass through our servers.</li>
     </ul>
-    <p>In entrambi i casi vale anche l'informativa di OpenRouter.</p>
+    <p>OpenRouter's privacy policy also applies in both cases.</p>
 
-    <h2>Acquisti in-app</h2>
-    <p>I pacchetti di scansioni si comprano con l'acquisto in-app di Apple (o di Google). Il pagamento lo gestisce lo store: noi non
-    vediamo i dati di pagamento. Per verificare gli acquisti usiamo RevenueCat, che riceve il tuo nome utente Discogs e le
-    transazioni dello store.</p>
+    <h2>In-app purchases</h2>
+    <p>Scan packs are purchased through Apple's (or Google's) in-app purchase system. The store handles payment: we do not see your
+    payment details. We use RevenueCat to verify purchases; it receives your Discogs username and store transactions.</p>
 
-    <h2>Video dei dischi</h2>
-    <p>Nella scheda di un disco puoi aprire i video che gli utenti Discogs hanno collegato a quel disco. Il video si apre nel player
-    ufficiale di YouTube (modalità privacy avanzata, youtube-nocookie.com) solo quando lo tocchi: da quel momento vale l'informativa
-    di Google/YouTube.</p>
+    <h2>Record videos</h2>
+    <p>On a record's detail page, you can open videos that Discogs users have linked to that record. A video only opens in the
+    official YouTube player (privacy-enhanced mode, youtube-nocookie.com) when you tap it. From that point on, Google/YouTube's
+    privacy policy applies.</p>
 
     <h2>Bandcamp</h2>
-    <p>Se colleghi Bandcamp dal Profilo, il nome utente e la password Subsonic che generi su Bandcamp restano solo sul telefono (nell'archivio sicuro del sistema) e vengono inviati solo a Bandcamp, per leggere i dischi che hai comprato: titolo, artista, copertina e tracce. Non passano dal nostro server. Se metti un disco Bandcamp in una valigia, salviamo titolo, artista e copertina come per gli altri dischi della valigia. Da quel momento vale anche l'informativa di Bandcamp. Puoi scollegarlo dal Profilo, e revocare le credenziali dalle impostazioni di Bandcamp.</p>
+    <p>If you connect Bandcamp from Profile, the Subsonic username and password you generate on Bandcamp stay only on your phone
+    (in the system's secure storage) and are sent only to Bandcamp to retrieve the records you bought: title, artist, artwork and
+    tracks. They do not pass through our server. If you add a Bandcamp record to a crate, we store its title, artist and artwork,
+    just as we do for other records in the crate. From that point on, Bandcamp's privacy policy also applies. You can disconnect
+    Bandcamp from Profile and revoke the credentials in your Bandcamp settings.</p>
 
-    <h2>Fotocamera</h2>
-    <p>La fotocamera serve solo per leggere i codici a barre e fotografare i dischi.</p>
+    <h2>Camera</h2>
+    <p>The camera is only used to read barcodes and take photos of records.</p>
 
-    <h2>Cancellazione</h2>
-    <p>Nel Profilo, in "Dati del profilo", il pulsante "Elimina profilo e dati" cancella dal nostro server il profilo e tutti i dati
-    collegati (collezione, prezzi pagati, wantlist, notifiche, valigie, scansioni e ricerche, saldo delle scansioni da foto: quelle non
-    usate si perdono). I BPM e le tonalità condivisi restano, senza il tuo nome. Uscendo dall'account il token Discogs viene rimosso
-    dal telefono.</p>
+    <h2>Deletion</h2>
+    <p>In Profile, under "Profile details", the "Delete profile and data" button deletes your profile and all associated data from
+    our server (collection, prices paid, wantlist, notifications, crates, scans and searches, and your photo scan balance: unused
+    scans are lost). Shared BPM and keys remain, without your name. Signing out removes the Discogs token from your phone.</p>
 
-    <h2>Contatti</h2>
+    <h2>Contact</h2>
     <!-- Inserisci un indirizzo email di contatto (richiesto per la revisione App Store) -->
-    <p>Per domande: indirizzo email in arrivo.</p>
+    <p>For questions: contact email coming soon.</p>
       </div>
 
       <footer>
